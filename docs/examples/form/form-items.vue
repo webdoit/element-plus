@@ -23,6 +23,8 @@
       ]"
     >
       <el-input v-model="dynamicValidateForm.email" />
+            <el-input v-model="dynamicValidateForm.haha" />
+
     </el-form-item>
     <el-form-item
       v-for="(domain, index) in dynamicValidateForm.domains"
@@ -55,7 +57,8 @@ import type { FormInstance } from 'element-plus'
 const formRef = ref<FormInstance>()
 const dynamicValidateForm = reactive<{
   domains: DomainItem[]
-  email: string
+  email: string,
+  haha:any
 }>({
   domains: [
     {
@@ -64,6 +67,7 @@ const dynamicValidateForm = reactive<{
     },
   ],
   email: '',
+  haha: ''
 })
 
 interface DomainItem {
